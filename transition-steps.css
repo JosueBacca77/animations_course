@@ -1,0 +1,51 @@
+/*
+transition-property: none | all | property name
+    none -> no property will be transitioned
+    all-> all transitionable property will be transitioned
+    property name-> the transitioned property name
+
+transition-duration: duration -> s | ms
+transition-timing-function: timing function
+    steps
+        transition-timing-function:steps(n,j)
+        n -> number of steps
+        j -> jump keyword -> start || end
+            start: it will start with jump, then wait, jump, wait
+            end: it will start wiht wait, then start, wait, start
+
+transition-delay: delay, could be s || ms
+
+transition: [property] [duration] [timing function] [delay]
+*/
+
+.container{
+    background-color: rgb(228, 233, 238);
+}
+
+.transition{
+    height: 70px;
+    width: 70px;
+    background-color: #bfdb9d;
+    margin: 20px;
+    transition-property: margin-left, background-color;
+    transition-duration: 2s, 4s;
+    /* transition-timing-function: steps(4); */
+}
+
+.container:hover .transition{
+    background-color: #69a123;
+    cursor: pointer;
+    margin-left: 700px;
+}
+
+.steps{
+    transition-timing-function: steps(4);
+}
+
+.steps-start{
+    transition-timing-function: steps(4, start);
+}
+
+.steps-end{
+    transition-timing-function: steps(4, end);
+}

@@ -1,0 +1,63 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    margin: 100px 200px;
+}
+
+p{
+    user-select: none;
+}
+
+.flex{
+    display: flex;
+    /* place-items: center; */
+    justify-items: start;
+    align-items: center;
+    background-color: lightcyan;
+    height: 300px;
+    width: 400px;
+}
+
+.flexChild{
+    background-color: azure;
+    margin: 10px;
+}
+
+.img1{
+    width: 300px;
+    height: 300px;
+    /* object-fit: ; */
+    margin: 30px;
+}
+
+.img2{
+    width: 300px;
+    height: 300px;
+    object-fit:cover ; 
+}
+
+.blend {
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } 
+  
+  .blend img {
+    position: absolute;
+  }
+  
+  .blend .img1 { 
+    font-size: 150px;
+    mix-blend-mode: color-burn ;
+  }
+
+  .backgroundElement{
+    width: 300px;
+    height: 300px;
+    background: url("./images/gardenia.jpeg"), url("./images/night-sky2.jpg");
+    background-blend-mode: color-dodge  ;
+   }

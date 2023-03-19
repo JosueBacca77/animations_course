@@ -1,0 +1,32 @@
+body{
+    display: flex;
+}
+main{
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px
+}
+
+.sidebar{
+    background-color: lightgreen;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    container-type: size,
+}
+
+img{
+    width: 120px;
+    height: 120px;
+}
+
+@container (max-width:200px){
+    .sidebar{
+        background-color: black;
+    }
+    img{
+        width: 50px;
+        height: 50px;
+    }
+}

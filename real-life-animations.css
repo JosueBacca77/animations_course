@@ -1,0 +1,153 @@
+body{
+    background-color: black;
+}
+/* For typing */
+/* .container{
+    margin: 100px;
+    width: 90vw;
+    display: flex;
+    justify-content: flex-start;
+} */
+
+/* For slider */
+.container{
+    margin: 100px 0 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes cursor {
+    0%, 100%{border-color: transparent;}
+    50%{border-color: rgb(10, 161, 10);}
+}
+
+@keyframes width-text {
+    0%{width: 0;}
+    100%{width: 100%;}
+}
+
+.text{
+    font-size: 32px;
+    color: rgb(10, 161, 10);
+    border-right: 3px solid rgb(10, 161, 10);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: cursor 0.8s step-end infinite alternate, width-text 8s steps(125);
+    user-select: none;
+}
+
+@keyframes slide-left {
+    0%{margin-left: 0;}
+    10%{margin-left: 0;}
+
+    20%{margin-left: -100%;}
+    30%{margin-left: -100%;}
+    
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    
+    80%{margin-left: -300%;}
+    90%{margin-left: -300%;}
+
+    100%{margin-left: 0;}
+}
+
+.slider{
+    height: 600px;
+    width: 600px;
+    background-color: gray;
+    overflow: hidden;
+}
+
+.slides{
+    display: flex;
+    width: 400%;
+    height: 600px;
+    animation: slide-left 20s ease-in infinite;
+}
+
+.slide{
+    width: 600px;
+    height: 600px;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ @keyframes spinn {
+    from{transform: rotate(0);}
+    to{transform: rotate(360deg);}
+ }
+
+.overlay-spinner{
+    width: 100%;
+    height: 100%;
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+#overlay{
+    display: none;
+}
+
+#overlay.modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    color: aliceblue;
+}
+
+.spinner{
+    margin: 30px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 3px solid white;
+    border-top-color: transparent;
+    animation: spinn 1s linear infinite;
+}
+
+@keyframes progress-bar {
+    0%{width: 0;}
+    20%{width: 10%;}
+    30%{width: 10%;}
+    40%{width: 13%;}
+    50%{width: 30%;}
+    60%{width: 50%;}
+    70%{width:54%;}
+    80%{width:66%;}
+    90%{width:66%;}
+    91%{width:72%;}
+    100%{width:100%;}
+}
+
+.bar{
+    position: relative;
+    background-color: white;
+    width: 50vw;
+    height: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.progress{
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(128, 0, 128);
+    animation: progress-bar 8s ease-in-out;
+}

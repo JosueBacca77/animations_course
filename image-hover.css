@@ -1,0 +1,220 @@
+body{
+    background-color: rgb(214, 165, 105);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 200px;
+}
+
+figure{
+    background-color: lightgoldenrodyellow;
+    cursor: pointer;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+figure img{
+    /* width: 200px;
+    height: 200px; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+figure img{
+    object-fit: cover;
+}
+
+/* ZOOM IN
+
+
+.fig1 img{
+    transition: transform 0.4s;
+    transition-delay: 0.2s;
+}
+.fig1:hover img{
+    transform: scale(1.9);
+}
+
+.fig2 img{
+    transition-property: width;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.8s;
+}
+.fig2:hover img{
+    width: 400px;
+}
+
+.fig3 img{
+    transition-property: width, transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.8s;
+}
+.fig3:hover img{
+    width: 400px;
+    transform: translate(-100px, -270px);
+} */
+
+/* ZOOM OUT */
+
+/* .fig1 img{
+    transition: transform;
+    transition-delay: 0.2s;
+    transition-duration: 1s;
+    transform: scale(1.5);
+}
+.fig1:hover img{
+    transform: scale(1);
+}
+
+.fig2 img{
+    width: 160%;
+    transition-property: width;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.8s;
+}
+.fig2:hover img{
+    width: 100%;
+}
+
+.fig3 img{
+    width: 160%;
+    transition-property: width, transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.8s;
+    transform: translate(-70px, -80px);
+
+}
+.fig3:hover img{
+    width: 100%;
+    transform: translate(0);
+
+} */
+
+/* ROTATE */
+
+/* .fig1 img{
+    width:100%;
+    left:0;
+    top:0;
+    transition-property: width, transform, left, top;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in-out;
+}
+
+.fig1:hover img{
+    width: 180%;
+    transform: rotate(30deg);
+    left: -50%;
+    top: -60%
+}
+
+.fig2 img{
+    width:180%;
+    left:0;
+    top:0;
+    transition-property: width, transform, left, top;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in-out;
+}
+
+.fig2:hover img{
+    width: 130%;
+    transform: rotate(10deg);
+    left: -20%;
+    top: -40%
+} */
+
+/* FILTER */
+
+/* .fig1 img{
+    filter: sepia(100%);
+    transition: filter 1s ease-in;
+}
+
+.fig1:hover img{
+    filter: sepia(0%)
+}
+
+.fig2 img{
+    filter:grayscale(100%);
+    transition: filter 1s ease-in;
+}
+
+.fig2:hover img{
+    filter: grayscale(0%)
+} */
+
+/* CAPTION HOVER EFFECT */
+
+.fig1 figcaption{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    background-color: rgb(0, 0, 0, 0.45);
+    color: aliceblue;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.4s;
+}
+
+.fig1:hover figcaption{
+    opacity: 1;
+}
+
+.fig2 figcaption{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: aliceblue;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.4s;
+}
+
+.fig2:hover figcaption{
+    opacity: 1;
+}
+
+.fig2 img{
+    transition: transform 1s ease;
+}
+
+.fig2:hover img{
+    transform: scale(1.5);
+}
+
+.fig3 figcaption{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    bottom: -60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    background-color: rgb(0, 0, 0, 0.45);
+    color: aliceblue;
+    transition: bottom 0.4s ease;
+}
+
+.fig3:hover figcaption{
+    bottom:0
+}

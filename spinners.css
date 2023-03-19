@@ -1,0 +1,312 @@
+.container{
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+@keyframes rotating {
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes grow {
+    from {transform: scale(0); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+.circular-border{
+    margin-top: 30px;
+    height: 40px;
+    width: 40px;
+    border: 5px solid lightpink;
+    border-top: 5px solid purple;
+    border-radius: 50%;
+    animation: rotating 1s cubic-bezier(0.91, -0.03, 0.94, 1.06) 0s infinite;
+}
+
+.growing-circle{
+    margin-top: 30px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: lightcoral;
+    animation: grow 0.8s linear 0s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {transform: scale(0.2);}
+    50% {transform: scale(1);}
+}
+
+.dots-container{
+    margin: 20px;
+    display: flex;
+    gap: 8px;
+}
+
+.dot{
+    width: 15px;
+    height: 15px;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    animation: pulse 1.2s infinite
+}
+
+.dot1{
+    animation-delay: 0.2s;
+}
+.dot2{
+    animation-delay: 0.4s;
+}
+.dot3{
+    animation-delay: 0.6s;
+}
+
+
+@keyframes beat {
+    0%, 100% {transform: scale(0.4) rotate(45deg);}
+    50% {transform: scale(1) rotate(45deg);}
+}
+
+.heart{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    background-color: transparent;
+    margin: 30px;
+    animation: beat 1.2s infinite;
+}
+
+.heart::before{
+    content: '';
+    background-color: palevioletred;
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.heart::after{
+    content: '';
+    background-color:palevioletred;
+    width: 40px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+@keyframes round-right {
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes round-left {
+    from {transform: rotate(0);}
+    to {transform: rotate(-360deg);}
+}
+
+.rotating-squares{
+    margin: 30px;
+    position: relative;
+
+}
+
+.big-square{
+    width: 60px;
+    height: 60px;
+    border: 5px solid white;
+    animation: round-right 1.5s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.small-square{
+    width: 30px;
+    height: 30px;
+    border: 5px solid white;
+    animation: round-left 1.5s linear infinite;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+@keyframes wave-load {
+    0%,100% {background-color: purple; height: 20px}
+    50% {background-color: lightblue; height: 60px;}
+}
+
+.wave-loader{
+    margin: 70px;
+    position: relative;
+    display: flex;
+    gap:20px;
+    height: 100px;
+    align-items: center;
+}
+
+.wave{
+    width: 20px;
+    height: 20px;
+    background-color: purple;
+    border-radius: 5px;
+    animation: wave-load 1.2s infinite;
+}
+
+.w1{
+    animation-delay: 0.2s;
+}
+
+.w2{
+    animation-delay: 0.4s;
+}
+
+.w3{
+    animation-delay: 0.6s;
+}
+
+.w4{
+    animation-delay: 0.8s;
+}
+.w5{
+    animation-delay: 1s;
+}
+
+@keyframes colorful-border {
+    0% {border-radius: 0;}
+    100% {border-radius: 50%;}
+}
+
+@keyframes color1 {
+    0% {background-color: purple;}
+    100% {background-color: blue;}
+}
+
+@keyframes color2 {
+    0% {background-color: purple;}
+    100% {background-color: yellow;}
+}
+
+@keyframes color3 {
+    0% {background-color: purple;}
+    100% {background-color: red;}
+}
+
+@keyframes color4 {
+    0% {background-color: purple;}
+    100% {background-color: green;}
+}
+
+@keyframes distance-squares {
+    0% {width: 40px; height: 20px;}
+    100% {width: 80px; height: 40px;}
+}
+
+.colorful-squares{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.up-squares{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    animation: distance-squares 0.8s infinite alternate;
+}
+
+.down-squares{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    animation: distance-squares 0.8s infinite alternate;
+}
+
+.colorful{
+    width: 20px;
+    height: 20px;
+    background-color: purple;
+}
+
+.c1{
+    animation: colorful-border 0.8s infinite alternate, color1 0.8s infinite alternate;
+}
+.c2{
+    animation: colorful-border 0.8s infinite alternate, color2 0.8s infinite alternate;
+}
+.c3{
+    animation: colorful-border 0.8s infinite alternate, color3 0.8s infinite alternate;
+}
+.c4{
+    animation: colorful-border 0.8s infinite alternate, color4 0.8s infinite alternate;
+}
+
+
+@keyframes square-circle-rotate {
+    0% {width: 40px; height: 40px; border-radius: 0; transform: rotate(0);}
+    100% {width: 20px; height: 20px; border-radius: 50%; transform: rotate(-360deg)}
+}
+
+.square-to-circle{
+    margin: 50px;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(61, 55, 55);
+    animation: square-circle-rotate 1s ease-in-out infinite alternate;
+}
+
+@keyframes clockwise {
+    from{ transform: rotate(0)}
+    to{ transform: rotate(360deg);}
+
+}
+
+.clock-container{
+    background-color: rgb(223, 207, 185);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.clock{
+    margin: 50px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 3px solid white;
+    position: relative;
+}
+
+.clock::before{
+    content: '';
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 23.5px;
+    height: 15px;
+    width: 3px;
+    transform-origin: 50% 0;
+    animation: clockwise 2s linear infinite;
+}
+
+.clock::after{
+    content: '';
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 23.5px;
+    height: 20px;
+    width: 3px;
+    transform-origin: 50% 0;
+    animation: clockwise 1s linear infinite;
+}

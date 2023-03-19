@@ -1,0 +1,79 @@
+/*
+transition-property: none | all | property name
+    none -> no property will be transitioned
+    all-> all transitionable property will be transitioned
+    property name-> the transitioned property name
+
+transition-duration: duration -> s | ms
+transition-timing-function: timing function
+    predefined keywords
+        ease
+        ease-in
+        ease-out
+        ease-in-out
+        linear
+        step-start
+        step-end (equal to transition-delay)
+
+transition-delay: delay, could be s || ms
+
+transition: [property] [duration] [timing function] [delay]
+*/
+
+.transition{
+    height: 70px;
+    width: 70px;
+    background-color: #bfdb9d;
+    margin: 20px;
+    transition-property: margin-left;
+    transition-duration: 3s;
+}
+
+.container{
+    background-color: rgb(228, 233, 238);
+}
+
+.container:hover .transition{
+    background-color: #69a123;
+    cursor: pointer;
+    margin-left: 700px;
+}
+
+.container:hover .transition-delay{
+    background-color: #69a123;
+    cursor: pointer;
+    margin-left: 700px;
+}
+
+.ease{
+    transition-timing-function: ease;
+}
+
+.ease-in{
+    transition-timing-function: ease-in;
+}
+
+.ease-out{
+    transition-timing-function: ease-out;
+}
+
+.ease-in-out{
+    transition-timing-function: ease-in-out;
+}
+
+.step-start{
+    transition-timing-function: step-start;
+}
+
+.step-end{
+    transition-timing-function: step-end;
+}
+
+.transition-delay{
+    height: 70px;
+    width: 70px;
+    background-color: #bfdb9d;
+    margin: 20px;
+    transition-property: margin-left;
+    transition-delay: 3s;
+}

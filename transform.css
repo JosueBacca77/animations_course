@@ -1,0 +1,37 @@
+/* Transform
+    TRANSFORM WILL BE IGNORED IN INLINE-ELEMENTS 
+    Transformable -> block elements
+    Not transformable -> inline elements 
+
+    transform-origin: center center | 50% 50%
+
+    transform-origin: xAxis yAxis -> can be keywords, percentaje or length
+    transform-origin: 100% 0% = right top
+
+    To apply multiple transformations in one element at the same time we
+    need to apply them in one line and respecting this order: 
+    transform: rotate(10deg) translate(10px,10px) scale(1.5)
+
+*/
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 200px auto;
+    border: 2px dashed red;
+    width: 200px;
+    height: 200px;
+}
+
+
+.inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border: 1px solid blue ;
+    transform: rotate(10deg) translate(60px,90px) scale(1.5);
+
+}

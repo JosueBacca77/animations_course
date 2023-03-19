@@ -1,0 +1,27 @@
+/* SCALE */
+/* scale moves elements is vertical and horizontal direction
+
+transfrom: scale(sx,sy)
+transfrom: scale(sx) 
+transfrom: scaleX(sx)
+transfrom: scaleY(sy) 
+ sx and sy are only numbers(int,zero,decimals)
+ sx -> the amount of resize of the element in horizontal direction
+  sy -> the amount of resize of the element in vertical direction
+
+
+*/
+
+.wrapper{
+    margin: 200px auto;
+    border: 2px dashed red;
+    width: 300px;
+    height: 300px;
+}
+
+.inner{
+    width: 300px;
+    height: 300px;
+    border: 1px solid blue ;
+    transform: scale(2,2);
+}

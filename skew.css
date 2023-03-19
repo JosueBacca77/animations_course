@@ -1,0 +1,35 @@
+/*
+skew function tilting elements in 2d space
+transform: skew() : => sintax
+skew(ax,ay)
+skewX(ax)
+skewY(ay)
+
+ax -> the amount of the angle to use to distort the element in horizontal direction
+ay -> the amount of the angle to use to distort the element in vertical direction
+ax, ay -> can be degree, gradian, radian and turn 
+
+*/
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 200px auto;
+    border: 2px dashed red;
+    width: 200px;
+    height: 200px;
+}
+
+
+.inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border: 1px solid blue ;
+    transform: skewX(20deg);
+    transform: skewY(20deg)
+
+} 

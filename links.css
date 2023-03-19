@@ -1,0 +1,400 @@
+.container{
+    width: 60%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.container::first-letter{
+    text-transform: uppercase;
+}
+
+/* UNDERLINED LINK */
+
+.first-link{
+    height: 28px;
+    text-decoration: none;
+
+}
+
+.first-link .underlined-link{
+    text-decoration: none;
+    color:rgba(94, 105, 204, 0.705);
+
+}
+
+.first-link .underlined-link::after{
+    content:'';
+    display: block;
+    height: 2px;
+    opacity: 0;
+    background-color: rgb(187, 127, 243);
+    border-radius: 1px;
+    transition: opacity 0.4s;
+}
+
+.first-link .underlined-link:hover::after{
+    opacity: 1;
+}
+
+/* LEFT TO RIGHT LINK */
+
+.second-link{
+    height: 28px;
+}
+
+.second-link .left-right-link{
+    width: 0;
+    text-align: left;
+    transition: width 2s;
+    text-decoration: none;
+    color:rgba(93, 179, 139, 0.705);
+}
+
+.second-link .left-right-link::after{
+    content:'';
+    display: block;
+    height: 2px;
+    border-radius: 1px;
+    width: 0;
+    background-color: rgba(44, 204, 130, 0.705);
+    transition: width 1s;
+}
+
+.second-link .left-right-link:hover::after{
+    width: 30px;
+}
+
+.second-link .left-right-link:hover::after{
+    content:'';
+    display: block;
+    height: 2px;
+    border-radius: 1px;
+    width: 100%;
+    background-color: rgba(44, 204, 130, 0.705);
+    opacity: 1;
+}
+
+/* RIGHT TO LEFT LINK */
+
+.third-link{
+    height: 28px;
+    position: relative;;
+}
+
+.third-link .right-left-link{
+    text-decoration: none;
+}
+
+.third-link .right-left-link::after{
+    display: block;
+    position: absolute;
+    content: '';
+    height: 10px;
+    width: 0;
+    right: 0;
+    background-color: aquamarine;
+    transition-property: width background-color;
+    transition-timing-function: ease-out;
+    transition-duration: 0.3s;
+    border-radius: 2px;
+}
+
+.third-link .right-left-link:hover::after{
+    background-color: rgba(46, 131, 75, 0.438);
+    width: 100%;
+}
+
+/* CENTER TO EDGES LINK */
+
+.fourth-link{
+    height: 38px;
+    position: relative;
+}
+
+.fourth-link .center-edges-link{
+    text-decoration: none;
+}
+
+.fourth-link .center-edges-link::after{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: aquamarine;
+    transition-timing-function: ease-out;
+    transition-duration: 0.3s;
+    border-radius: 1px;
+    transition-property: transform;
+    transform: scaleX(0);
+    right: 0;
+    left: 0;
+}
+
+.fourth-link .center-edges-link:hover::after{
+    background-color: rgba(46, 131, 75, 0.438);
+    transform: scaleX(1);
+}
+
+/* EDGES TO CENTER LINK */
+
+.fifth-link{
+    height: 38px;
+    position: relative;
+}
+
+.fifth-link .edges-to-center-link{
+    text-decoration: none;
+    color:rgb(233, 121, 241)
+}
+
+.fifth-link .edges-to-center-link::before{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    height: 3px;
+    border-radius: 1px;
+    width: 0;
+    background-color:rgb(92, 52, 104);
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+.fifth-link .edges-to-center-link:hover::before{
+    width: 60%;
+}
+
+.fifth-link .edges-to-center-link::after{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: '';
+    height: 3px;
+    border-radius: 2px;
+    width: 0;
+    background-color:rgb(92, 52, 104);
+    transition-property: width;
+    transition-duration: 1s;
+
+}
+
+.fifth-link .edges-to-center-link:hover::after{
+    width: 60%;
+}
+
+/* Top and Bottom Left to Right and Right to Left Effects */
+
+.sixth-link{
+    height: 38px;
+    position: relative;
+}
+
+.sixth-link .top-bottom-left-to-right-link{
+    text-decoration: none;
+    color:rgb(204, 164, 89)
+}
+
+.sixth-link .top-bottom-left-to-right-link::before{
+    position: absolute;
+    left: 0;
+    content: '';
+    height: 3px;
+    border-radius: 1px;
+    width: 0;
+    background-color:rgb(92, 52, 104);
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+.sixth-link .top-bottom-left-to-right-link:hover::before{
+    width: 100%;
+}
+
+.sixth-link .top-bottom-left-to-right-link::after{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: '';
+    height: 3px;
+    border-radius: 1px;
+    width: 0;
+    background-color:rgb(92, 52, 104);
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+.sixth-link .top-bottom-left-to-right-link:hover::after{
+    width: 100%;
+}
+
+/* Top and Bottom Right to Left and Right to Left Effects */
+
+.seventh-link{
+    height: 38px;
+    position: relative;
+}
+
+.seventh-link .top-bottom-right-to-left-link{
+    text-decoration: none;
+    color:rgb(177, 240, 140)
+}
+
+.seventh-link .top-bottom-right-to-left-link::before{
+    position: absolute;
+    right: 0;
+    content: '';
+    height: 3px;
+    border-radius: 1px;
+    width: 0;
+    background-color:rgb(92, 52, 104);
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+.seventh-link .top-bottom-right-to-left-link:hover::before{
+    width: 100%;
+}
+
+.seventh-link .top-bottom-right-to-left-link::after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+    height: 3px;
+    border-radius: 1px;
+    width: 0;
+    background-color:rgb(92, 52, 104);
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+.seventh-link .top-bottom-right-to-left-link:hover::after{
+    width: 100%;
+}
+
+/* Vertical and horizontal swipe text */
+/* Vertical */
+.eigth-link{
+    font-size: 30px;
+    background-color: lightgray;
+    width: 200px;
+    text-align: center;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.swipe-vertical-text{
+    text-decoration: none;
+}
+
+.initial-vertical-text{
+    display: block;
+    transition: transform 0.3s ease-in;
+}
+
+.swipe-vertical-text::after{
+    display: block; /*this make swipe-text after appear below */
+    content: attr(data-swipe-text);
+    position: absolute; /* respect eigth link ( is position relative ) */
+    bottom: -100%;
+    transition: bottom 0.3s ease-in;
+}
+
+.swipe-vertical-text:hover::after{
+    bottom: 0;
+}
+
+.swipe-vertical-text:hover .initial-vertical-text{
+    transform: translateY(-100%);
+}
+
+/* Horizontal */
+.ninth-link{
+    font-size: 30px;
+    background-color: lightpink;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.swipe-horizontal-text{
+    text-decoration: none;
+}
+
+.initial-horizontal-text{
+    display: block;
+    transition: transform 0.5s ease-in;
+}
+
+.ninth-link .swipe-horizontal-text::after{
+    display: block; /*this make swipe-text after appear next to swipe-text*/
+    content: attr(data-swipe-text);
+    position: absolute; /* respect ninth link ( is position relative ) */
+    left: -100%;
+    right: 0;
+    top: 0;
+    transition: left 0.5s ease-in;
+}
+
+.ninth-link .swipe-horizontal-text:hover::after{
+    left: 0;
+}
+
+.ninth-link .swipe-horizontal-text:hover .initial-horizontal-text{
+    transform: translateX(100%);
+}
+
+/* Left right lines to top and bottom */
+.tenth-link{
+    background-color: lightsalmon;
+    padding: 100px;
+}
+
+.left-right-top-bottom {
+    text-decoration: none;
+    color: wheat;
+    display: block;
+    font-size: 40px;
+    position: relative;
+}
+
+.left-right-top-bottom::before{
+    content: '';
+    height: 5px;
+    width: 50px;
+    background-color: wheat;
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: rotate(90deg);
+    transition: all 1s;
+}
+
+.left-right-top-bottom::after{
+    content: '';
+    height: 5px;
+    width: 50px;
+    background-color: wheat;
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: rotate(90deg);
+    transition: all 1s;
+    bottom: 0;
+    left: 100%
+}
+
+.left-right-top-bottom:hover::before {
+    transform: rotate(0deg);
+    left: 50%;
+    top: 0
+}
+
+.left-right-top-bottom:hover::after {
+    transform: rotate(0deg);
+    left: 50%;
+    top: 100%;
+}

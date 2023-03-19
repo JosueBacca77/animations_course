@@ -1,0 +1,42 @@
+.container{
+    background-color: rgb(169, 193, 218);
+    height: 70vh;
+    width: 60vw;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+}
+
+.transition{
+    height: 70px;
+    width: 70px;
+    background-color: #bfdb9d;
+    margin: 20px 0 0 20px; 
+    transition-duration: 2s;
+    transition-delay: 1s;
+    transition-timing-function: cubic-bezier(0.11, 0.85, 1, -0.66);
+}
+
+.transition2{
+    height: 70px;
+    width: 70px;
+    background-color: #bfdb9d;
+    position: relative; 
+    top: 20px;
+    right: 20px;
+    transition-duration: 2s;
+    transition-delay: 1s;
+    transition-timing-function: cubic-bezier(0.57, -0.14, 0.38, 0.81);
+}
+
+.container:hover .transition{
+    background-color: #52880f;
+    margin-left: 30vw;
+    margin-top: 50vh;
+}
+
+.container:hover .transition2{
+    background-color: #52880f;
+    right: 30vw;
+    top: 50vh;
+}
